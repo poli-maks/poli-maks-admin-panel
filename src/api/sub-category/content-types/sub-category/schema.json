@@ -16,6 +16,25 @@
     }
   },
   "attributes": {
+    "uid": {
+      "type": "integer",
+      "unique": false,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
     "products": {
       "type": "relation",
       "relation": "manyToMany",
@@ -27,24 +46,6 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "sub_categories"
-    },
-    "uid": {
-      "type": "integer",
-      "unique": false,
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
     }
   }
 }
