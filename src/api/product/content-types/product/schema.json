@@ -75,6 +75,17 @@
         }
       },
       "type": "blocks"
+    },
+    "TableRow": {
+      "displayName": "Table",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "table.table"
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_table_tables",
+  "info": {
+    "displayName": "Table",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "type": "string"
+    },
+    "diameter": {
+      "type": "string"
+    },
+    "length": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "string"
+    }
+  }
+}
