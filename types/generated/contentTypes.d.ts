@@ -701,11 +701,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    sub_categories: Attribute.Relation<
-      'api::category.category',
-      'manyToMany',
-      'api::sub-category.sub-category'
-    >;
     products: Attribute.Relation<
       'api::category.category',
       'manyToMany',
@@ -718,6 +713,11 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
           localized: false;
         };
       }>;
+    sub_categories: Attribute.Relation<
+      'api::category.category',
+      'manyToMany',
+      'api::sub-category.sub-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -880,16 +880,22 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToMany',
       'api::category.category'
     >;
-    sub_categories: Attribute.Relation<
-      'api::product.product',
-      'manyToMany',
-      'api::sub-category.sub-category'
-    >;
     uid: Attribute.Integer &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
+        };
+      }>;
+    sub_categories: Attribute.Relation<
+      'api::product.product',
+      'manyToMany',
+      'api::sub-category.sub-category'
+    >;
+    markDawn: Attribute.Blocks &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
         };
       }>;
     createdAt: Attribute.DateTime;
@@ -933,13 +939,6 @@ export interface ApiSubCategorySubCategory extends Schema.CollectionType {
     };
   };
   attributes: {
-    uid: Attribute.Integer &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     title: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -947,15 +946,22 @@ export interface ApiSubCategorySubCategory extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    products: Attribute.Relation<
-      'api::sub-category.sub-category',
-      'manyToMany',
-      'api::product.product'
-    >;
+    uid: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     categories: Attribute.Relation<
       'api::sub-category.sub-category',
       'manyToMany',
       'api::category.category'
+    >;
+    products: Attribute.Relation<
+      'api::sub-category.sub-category',
+      'manyToMany',
+      'api::product.product'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

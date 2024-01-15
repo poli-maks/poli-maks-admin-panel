@@ -16,16 +16,6 @@
     }
   },
   "attributes": {
-    "uid": {
-      "type": "integer",
-      "unique": false,
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
     "title": {
       "pluginOptions": {
         "i18n": {
@@ -33,18 +23,28 @@
         }
       },
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": false
     },
-    "products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "mappedBy": "sub_categories"
+    "uid": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "required": true
     },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
+      "inversedBy": "sub_categories"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
       "inversedBy": "sub_categories"
     }
   }

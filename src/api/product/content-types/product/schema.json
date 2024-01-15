@@ -53,12 +53,6 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "sub_categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::sub-category.sub-category",
-      "inversedBy": "products"
-    },
     "uid": {
       "pluginOptions": {
         "i18n": {
@@ -67,6 +61,20 @@
       },
       "type": "integer",
       "required": true
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-category.sub-category",
+      "mappedBy": "products"
+    },
+    "markDawn": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "blocks"
     }
   }
 }
