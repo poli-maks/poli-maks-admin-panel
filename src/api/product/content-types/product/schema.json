@@ -76,7 +76,7 @@
       },
       "type": "blocks"
     },
-    "TableRow": {
+    "tableRow": {
       "displayName": "Table",
       "type": "component",
       "repeatable": true,
