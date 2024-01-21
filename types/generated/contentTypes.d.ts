@@ -857,13 +857,12 @@ export interface ApiProductProduct extends Schema.CollectionType {
   attributes: {
     title: Attribute.String &
       Attribute.Required &
-      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    descShort: Attribute.String &
+    descShort: Attribute.Text &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -872,7 +871,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     img: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     categories: Attribute.Relation<
@@ -901,7 +900,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     tableRow: Attribute.Component<'table.table', true> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;
