@@ -2,7 +2,8 @@
   "collectionName": "components_table_tables",
   "info": {
     "displayName": "Table",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,6 +17,18 @@
       "type": "string"
     },
     "weight": {
+      "type": "string"
+    },
+    "volume": {
+      "type": "string"
+    },
+    "wall_thickness": {
+      "type": "string"
+    },
+    "coating_thickness": {
+      "type": "string"
+    },
+    "cross_section": {
       "type": "string"
     }
   }
