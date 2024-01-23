@@ -748,6 +748,7 @@ export interface ApiContactContact extends Schema.CollectionType {
     singularName: 'contact';
     pluralName: 'contacts';
     displayName: 'Contact';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -777,6 +778,18 @@ export interface ApiContactContact extends Schema.CollectionType {
         };
       }>;
     officeEmail: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    metartEmail: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    officePhone: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
