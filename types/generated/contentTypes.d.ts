@@ -916,6 +916,12 @@ export interface ApiProductProduct extends Schema.CollectionType {
           localized: false;
         };
       }>;
+    slug: Attribute.UID<'api::product.product', 'title'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
