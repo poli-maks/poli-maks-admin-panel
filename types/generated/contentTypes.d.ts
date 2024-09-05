@@ -917,6 +917,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
         };
       }>;
     slug: Attribute.UID<'api::product.product', 'title'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
