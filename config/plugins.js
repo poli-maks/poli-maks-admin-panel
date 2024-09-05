@@ -36,14 +36,6 @@ module.exports = ({ env }) => ({
   },
 
   // Configuration for the custom links plugin
-  "strapi-plugin-custom-links": {
-    enabled: true, // Ensure the plugin is enabled
-    config: {
-      contentTypes: [
-        // Replace with your content types that need custom links
-        "api::mycontenttype.mycontenttype",
-        "api::othercontenttype.othercontenttype",
-      ],
-    },
+  "strapi-plugin-custom-links": undefined,
   },
 });
