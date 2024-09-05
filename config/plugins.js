@@ -1,17 +1,17 @@
 module.exports = ({ env }) => ({
-  graphql: {
-    config: {
-      endpoint: "/graphql",
-      shadowCRUD: true,
-      playgroundAlways: true,
-      depthLimit: 7,
-      amountLimit: 100,
-      apolloServer: {
-        tracing: false,
-      },
-    },
-  },
-
+  // graphql: {
+  //   config: {
+  //     endpoint: "/graphql",
+  //     shadowCRUD: true,
+  //     playgroundAlways: true,
+  //     depthLimit: 7,
+  //     amountLimit: 100,
+  //     apolloServer: {
+  //       tracing: false,
+  //     },
+  //   },
+  // },
+  
   upload: {
     config: {
       provider: "cloudinary",
@@ -31,9 +31,9 @@ module.exports = ({ env }) => ({
     },
   },
 
-  "strapi-plugin-populate-deep": {
-    config: {
-      defaultDepth: 5,
-    },
-  },
+  // "strapi-plugin-populate-deep": {
+  //   config: {
+  //     defaultDepth: 5,
+  //   },
+  // },
 });
