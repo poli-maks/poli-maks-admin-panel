@@ -21,12 +21,10 @@ module.exports = ({ env }) => ({
         api_secret: env("CLOUDINARY_SECRET"),
       },
       actionOptions: {
-        actionOptions: {
-          upload: {
-            folder: "unlockers",
-          },
-          delete: {},
+        upload: {
+          folder: "unlockers",
         },
+        delete: {},
       },
     },
   },
@@ -34,6 +32,18 @@ module.exports = ({ env }) => ({
   "strapi-plugin-populate-deep": {
     config: {
       defaultDepth: 5,
+    },
+  },
+
+  // Configuration for the custom links plugin
+  "strapi-plugin-custom-links": {
+    enabled: true, // Ensure the plugin is enabled
+    config: {
+      contentTypes: [
+        // Replace with your content types that need custom links
+        "api::mycontenttype.mycontenttype",
+        "api::othercontenttype.othercontenttype",
+      ],
     },
   },
 });
