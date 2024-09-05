@@ -1,17 +1,17 @@
 module.exports = ({ env }) => ({
-  // graphql: {
-  //   config: {
-  //     endpoint: "/graphql",
-  //     shadowCRUD: true,
-  //     playgroundAlways: true,
-  //     depthLimit: 7,
-  //     amountLimit: 100,
-  //     apolloServer: {
-  //       tracing: false,
-  //     },
-  //   },
-  // },
-  
+  graphql: {
+    config: {
+      endpoint: "/graphql",
+      shadowCRUD: true,
+      playgroundAlways: true,
+      depthLimit: 7,
+      amountLimit: 100,
+      apolloServer: {
+        tracing: false,
+      },
+    },
+  },
+
   upload: {
     config: {
       provider: "cloudinary",
@@ -21,19 +21,18 @@ module.exports = ({ env }) => ({
         api_secret: env("CLOUDINARY_SECRET"),
       },
       actionOptions: {
-        actionOptions: {
-          upload: {
-            folder: "unlockers",
-          },
-          delete: {},
+        upload: {
+          folder: "unlockers",
         },
+        delete: {},
       },
     },
   },
 
-  // "strapi-plugin-populate-deep": {
-  //   config: {
-  //     defaultDepth: 5,
-  //   },
-  // },
+  "strapi-plugin-populate-deep": {
+    config: {
+      defaultDepth: 5,
+    },
+  },
+
 });
