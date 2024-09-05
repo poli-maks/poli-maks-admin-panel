@@ -35,7 +35,10 @@ module.exports = ({ env }) => ({
     },
   },
 
-  // Configuration for the custom links plugin
-  "strapi-plugin-custom-links": undefined,
+  "strapi-plugin-custom-links": {
+    enabled: true,
+    config: {
+      // Any specific configuration options for the plugin (if required)
+    },
   },
 });
