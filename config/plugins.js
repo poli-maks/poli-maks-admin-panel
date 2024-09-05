@@ -21,10 +21,12 @@ module.exports = ({ env }) => ({
         api_secret: env("CLOUDINARY_SECRET"),
       },
       actionOptions: {
-        upload: {
-          folder: "unlockers",
+        actionOptions: {
+          upload: {
+            folder: "unlockers",
+          },
+          delete: {},
         },
-        delete: {},
       },
     },
   },
@@ -34,6 +36,4 @@ module.exports = ({ env }) => ({
       defaultDepth: 5,
     },
   },
-
-  
 });
